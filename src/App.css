@@ -1,0 +1,254 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #243364;
+  background-color: #f7f5f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d3d6e0;
+}
+
+.header h1 {
+  margin: 0;
+  color: #243364;
+  font-size: 1.25rem;
+}
+
+.header button {
+  padding: 0.35rem;
+  background: transparent;
+  color: #243364;
+  border: 1px solid #243364;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.6rem;
+  line-height: 1;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header button:hover:not(:disabled) {
+  background: #d3d6e0;
+}
+
+.header button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.sites-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.site-card {
+  background: white;
+  border: 1px solid #d3d6e0;
+  border-radius: 4px;
+  padding: 0.75rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.site-card:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header h3 {
+  margin: 0;
+  color: #243364;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-icon {
+  color: #666;
+  flex-shrink: 0;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border: 0;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.up {
+    color: rgb(86, 165, 115);
+  }
+
+  &.down {
+    color: rgb(198, 90, 90);
+  }
+}
+
+.site-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-start;
+}
+
+.action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #243364;
+  min-width: 24px;
+  min-height: 24px;
+  text-decoration: none;
+  transition: all 0.2s;
+  background: #f7f5f3;
+  border: 1px solid #243364;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  opacity: 0.5;
+}
+
+.action-icon:hover {
+  color: #fff;
+  background: #243364;
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+.action-icon:active {
+  transform: translateY(0);
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #f44336;
+}
+
+.no-sites {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  grid-column: 1 / -1;
+}
+
+.no-sites p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+
+  .header {
+    border-bottom-color: #444;
+  }
+
+  .header h1 {
+    color: #f6f6f6;
+  }
+
+  .site-card {
+    background: #3a3a3a;
+    border-color: #555;
+  }
+
+  .site-header h3 {
+    color: #f6f6f6;
+  }
+
+  .site-icon {
+    color: #aaa;
+  }
+
+  .action-icon {
+    background: #4a4a4a;
+    border-color: #666;
+    color: #ccc;
+  }
+
+  .action-icon:hover {
+    background: #1a237e;
+    border-color: #4fc3f7;
+    color: #4fc3f7;
+  }
+
+  .error {
+    background: #3e2723;
+    color: #ff8a80;
+    border-left-color: #ff5722;
+  }
+
+  .loading,
+  .no-sites {
+    color: #ccc;
+  }
+}
