@@ -2,39 +2,24 @@
 
 > 🚧 **Work in Progress** - This project is currently under development.
 
-A desktop application built with Tauri and React, powered by Vite for fast development.
+A desktop GUI wrapper for Sail, a containerized WordPress development environment. 
 
-## Tech Stack
+Sail provides a production-like development setup for WordPress sites with SSL certificates and phpMyAdmin, making it perfect for managing multiple WordPress projects locally. This app brings an intuitive interface to managing your Sail environments without needing to use the command line.
 
-- **Frontend**: React 18 + Vite
-- **Backend**: Tauri (Rust)
-- **Icons**: Lucide React
-- **Development**: Hot reloading with Vite
+## Features
+
+- Easy management of multiple WordPress sites
+- Built-in SSL certificate support
+- Integrated phpMyAdmin access
+- Production-matching server architecture
+- Simple, user-friendly interface
 
 ## Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- Rust (latest stable)
-- System dependencies for Tauri ([see Tauri docs](https://tauri.app/v1/guides/getting-started/prerequisites))
-
-### Development
 
 ```bash
 # Install dependencies
 npm install
 
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Run Tauri development mode
+# Start development
 npm run tauri dev
 ```
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
